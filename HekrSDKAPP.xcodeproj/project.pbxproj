@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		272693D01BD0CC9400A768B3 /* Hekrtemplate.zip in Resources */ = {isa = PBXBuildFile; fileRef = 272693CF1BD0CC9400A768B3 /* Hekrtemplate.zip */; settings = {ASSET_TAGS = (); }; };
 		274CD7A11BB8DF1800149595 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 274CD7A01BB8DF1800149595 /* main.m */; };
 		274CD7A41BB8DF1800149595 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 274CD7A31BB8DF1800149595 /* AppDelegate.m */; };
 		274CD7A71BB8DF1800149595 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 274CD7A61BB8DF1800149595 /* ViewController.m */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		272693CF1BD0CC9400A768B3 /* Hekrtemplate.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = Hekrtemplate.zip; sourceTree = "<group>"; };
 		274CD79C1BB8DF1800149595 /* HekrSDKAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HekrSDKAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		274CD7A01BB8DF1800149595 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		274CD7A21BB8DF1800149595 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 		274CD79E1BB8DF1800149595 /* HekrSDKAPP */ = {
 			isa = PBXGroup;
 			children = (
+				272693CF1BD0CC9400A768B3 /* Hekrtemplate.zip */,
 				274CD7A21BB8DF1800149595 /* AppDelegate.h */,
 				274CD7A31BB8DF1800149595 /* AppDelegate.m */,
 				274CD7A51BB8DF1800149595 /* ViewController.h */,
@@ -165,6 +168,7 @@
 				274CD7AF1BB8DF1800149595 /* LaunchScreen.storyboard in Resources */,
 				274CD7AC1BB8DF1800149595 /* Assets.xcassets in Resources */,
 				274CD7AA1BB8DF1800149595 /* Main.storyboard in Resources */,
+				272693D01BD0CC9400A768B3 /* Hekrtemplate.zip in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HekrSDK.h"
+#import <ZipArchive.h>
 
 @interface AppDelegate ()
 
@@ -18,6 +19,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //for test
+    NSString* path = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES).firstObject;
+//    path = [[path stringByAppendingPathComponent:@"Hekr"] stringByAppendingString:@"template"];
+    ZipArchive * archive = [[ZipArchive alloc] init];
+    [archive UnzipOpenFile:[[NSBundle mainBundle] pathForResource:@"Hekrtemplate" ofType:@"zip"]];
+    [archive UnzipFileTo:path overWrite:NO];
+    //
+    
     [[Hekr sharedInstance] config:@"" startPage:@"http://hekr.me/template/start"];
     
     UINavigationController * nav = (UINavigationController*)self.window.rootViewController;
