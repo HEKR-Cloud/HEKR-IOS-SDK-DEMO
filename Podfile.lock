@@ -1,0 +1,29 @@
+PODS:
+  - CocoaAsyncSocket (7.4.2)
+  - HekrSDK (1.0):
+    - CocoaAsyncSocket (~> 7.4)
+    - Reachability (~> 3.2)
+    - SocketRocket (~> 0.4.1)
+    - WebViewJavascriptBridge (~> 4.1.4)
+    - ZipArchive (~> 1.4.0)
+  - Reachability (3.2)
+  - SocketRocket (0.4.1)
+  - WebViewJavascriptBridge (4.1.4)
+  - ZipArchive (1.4.0)
+
+DEPENDENCIES:
+  - HekrSDK (from `./HekrSDK`)
+
+EXTERNAL SOURCES:
+  HekrSDK:
+    :path: ./HekrSDK
+
+SPEC CHECKSUMS:
+  CocoaAsyncSocket: f5783bdedd232d91b89769bc4b5a1580aed518ad
+  HekrSDK: 62e4a33a0a4a656a3473b846500710c6cc59ad75
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  SocketRocket: ee0b5c34182d37bb4f1f8d628bbe737718126daa
+  WebViewJavascriptBridge: f10ac16f2cd3adf2b941bd79477c55a8f6e01044
+  ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
+
+COCOAPODS: 0.38.2
