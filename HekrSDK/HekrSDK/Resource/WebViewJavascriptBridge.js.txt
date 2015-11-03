@@ -111,7 +111,7 @@
       });
     }
     function _setMsgHandle(tid,handle){
-      window.Hekr.messageHandels['tid'] = handle;
+      window.Hekr.messageHandels[tid] = handle;
     }
     function _renameDevice(tid,name,callback){
       bridge.callHandler('renameDevice',{'tid':tid,"name":name},function(ret){
@@ -130,6 +130,11 @@
     }
     function _createGroup(name,callback){
       bridge.callHandler('createGroup',{'name':name},function(ret){
+        callback(ret.obj,ret.error);
+      });
+    }
+    function _removeGroup(gid,callback){
+      bridge.callHandler('removeGroup',{'gid':gid},function(ret){
         callback(ret.obj,ret.error);
       });
     }
@@ -172,6 +177,14 @@
     }
     function _defaultUserHandel(user){
     }
+    function _close(animation){
+      bridge.callHandler('close',{'animation':animation},function(ret){
+      });
+    }
+    function _closeAll(animation){
+      bridge.callHandler('closeAll',{'animation':animation},function(ret){
+      });
+    }
     window.Hekr = {
       messageHandels:{},
       userHandel:_defaultUserHandel,
@@ -183,13 +196,16 @@
       getGroups:_getGroups,
       createGroup:_createGroup,
       renameGroup:_renameGroup,
+      removeGroup:_removeGroup,
       config:_config,
       isConnectSoftAP:_isConnectSoftAP,
       getAPList:_getAPList,
       cancelConfig:_cancelConfig,
       currentUser:_currentUser,
       logout:_logout,
-      onUser:_onUser
+      onUser:_onUser,
+      close:_close,
+      closeAll:_closeAll
     }
     bridge.init(function(message, responseCallback) {
       responseCallback({});
