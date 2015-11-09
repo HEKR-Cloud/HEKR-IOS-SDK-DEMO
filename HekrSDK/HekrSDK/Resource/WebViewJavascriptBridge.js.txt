@@ -175,6 +175,14 @@
     function _onUser(callback){
       window.Hekr.userHandel = callback;
     }
+    function _onRemoteNotification(callback){
+      window.Hekr.remoteNotificationHandle = callback;
+      bridge.callHandler('remoteNotificationsReady',{},function(ret){
+      });
+    }
+    function _defaultRemoteNotificationHandle(notification){
+
+    }
     function _defaultUserHandel(user){
     }
     function _close(animation){
@@ -185,9 +193,15 @@
       bridge.callHandler('closeAll',{'animation':animation},function(ret){
       });
     }
+    function _currentSSID(callback){
+      bridge.callHandler('currentSSID',{},function(res){
+        callback(res.obj);
+      });
+    }
     window.Hekr = {
       messageHandels:{},
       userHandel:_defaultUserHandel,
+      remoteNotificationHandle:_defaultRemoteNotificationHandle,
       getDevices:_getDevices,
       sendMsg:_sendMsg,
       setMsgHandle:_setMsgHandle,
@@ -205,7 +219,9 @@
       logout:_logout,
       onUser:_onUser,
       close:_close,
-      closeAll:_closeAll
+      closeAll:_closeAll,
+      currentSSID:_currentSSID,
+      onRemoteNotification:_onRemoteNotification
     }
     bridge.init(function(message, responseCallback) {
       responseCallback({});
