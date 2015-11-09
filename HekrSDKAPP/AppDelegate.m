@@ -22,13 +22,15 @@
     
     //for test
     NSString* path = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES).firstObject;
+    path = [path stringByAppendingPathComponent:@"Hekr"];
+    [[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
 //    path = [[path stringByAppendingPathComponent:@"Hekr"] stringByAppendingString:@"template"];
     ZipArchive * archive = [[ZipArchive alloc] init];
     [archive UnzipOpenFile:[[NSBundle mainBundle] pathForResource:@"Hekrtemplate" ofType:@"zip"]];
     [archive UnzipFileTo:path overWrite:NO];
     //
     
-    [[Hekr sharedInstance] config:@"" startPage:@"http://hekr.me/template/start"];
+    [[Hekr sharedInstance] config:@"" startPage:@"http://app.hekr.me/templates/start/index.html" launchOptions:launchOptions];
     
     UINavigationController * nav = (UINavigationController*)self.window.rootViewController;
     nav.navigationBarHidden = YES;
@@ -58,5 +60,7 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo{
+    [[Hekr sharedInstance] didReceiveRemoteNotification:userInfo];
+}
 @end

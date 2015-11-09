@@ -16,7 +16,8 @@ extern NSString * HekrSDKDevicesChangeNotification;
 
 @interface Hekr : NSObject
 +(instancetype) sharedInstance;
--(void) config:(NSString*) appKey startPage:(NSString*) url;
+-(void) config:(NSString*) appKey startPage:(NSString*) url launchOptions:(NSDictionary*) launchOptions;
+-(void) didReceiveRemoteNotification:(NSDictionary*) userInfo;
 
 @property (nonatomic,strong,readonly) HekrUser * user;
 @property (nonatomic,strong,readonly) NSArray * devices;
