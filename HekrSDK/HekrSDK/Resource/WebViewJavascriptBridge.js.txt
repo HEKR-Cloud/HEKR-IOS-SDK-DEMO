@@ -165,7 +165,7 @@
     }
     function _currentUser(callback){
       bridge.callHandler('currentUser',{},function(ret){
-        callback(ret);
+        callback(ret.obj);
       });
     }
     function _logout(){
@@ -173,7 +173,9 @@
       });
     }
     function _onUser(callback){
-      window.Hekr.userHandel = callback;
+      window.Hekr.userHandel = function(ret){
+        callback(ret.obj);
+      };
     }
     function _onRemoteNotification(callback){
       window.Hekr.remoteNotificationHandle = callback;

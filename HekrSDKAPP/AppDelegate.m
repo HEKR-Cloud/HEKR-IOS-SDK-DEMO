@@ -21,14 +21,13 @@
     // Override point for customization after application launch.
     
     //for test
-    NSString* path = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES).firstObject;
-    path = [path stringByAppendingPathComponent:@"Hekr"];
-    [[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
-//    path = [[path stringByAppendingPathComponent:@"Hekr"] stringByAppendingString:@"template"];
-    ZipArchive * archive = [[ZipArchive alloc] init];
-    [archive UnzipOpenFile:[[NSBundle mainBundle] pathForResource:@"Hekrtemplate" ofType:@"zip"]];
-    [archive UnzipFileTo:path overWrite:NO];
-    //
+//    NSString* path = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES).firstObject;
+//    path = [path stringByAppendingPathComponent:@"Hekr"];
+//    [[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
+//    ZipArchive * archive = [[ZipArchive alloc] init];
+//    [archive UnzipOpenFile:[[NSBundle mainBundle] pathForResource:@"Hekrtemplate" ofType:@"zip"]];
+//    [archive UnzipFileTo:path overWrite:NO];
+    //for test
     
     [[Hekr sharedInstance] config:@"" startPage:@"http://app.hekr.me/templates/start/index.html" launchOptions:launchOptions];
     
