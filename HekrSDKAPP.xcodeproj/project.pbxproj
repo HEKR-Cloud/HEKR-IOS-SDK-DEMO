@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		272693D01BD0CC9400A768B3 /* Hekrtemplate.zip in Resources */ = {isa = PBXBuildFile; fileRef = 272693CF1BD0CC9400A768B3 /* Hekrtemplate.zip */; settings = {ASSET_TAGS = (); }; };
+		272693D01BD0CC9400A768B3 /* Hekrtemplate.zip in Resources */ = {isa = PBXBuildFile; fileRef = 272693CF1BD0CC9400A768B3 /* Hekrtemplate.zip */; };
 		274CD7A11BB8DF1800149595 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 274CD7A01BB8DF1800149595 /* main.m */; };
 		274CD7A41BB8DF1800149595 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 274CD7A31BB8DF1800149595 /* AppDelegate.m */; };
 		274CD7A71BB8DF1800149595 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 274CD7A61BB8DF1800149595 /* ViewController.m */; };
@@ -118,6 +118,7 @@
 				274CD7991BB8DF1800149595 /* Frameworks */,
 				274CD79A1BB8DF1800149595 /* Resources */,
 				1A98598DFDBEE0C48DED4C56 /* Copy Pods Resources */,
+				F1333BE1668C7A7F6F0B8887 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -203,6 +204,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1333BE1668C7A7F6F0B8887 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

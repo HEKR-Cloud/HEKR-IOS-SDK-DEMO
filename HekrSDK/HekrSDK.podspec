@@ -137,5 +137,6 @@ Pod::Spec.new do |s|
   s.dependency "SocketRocket", "~> 0.4.1"
   s.dependency "WebViewJavascriptBridge", "~> 4.1.4"
   s.dependency "ZipArchive", "~> 1.4.0"
+  s.dependency "WeiboSDK", "~> 3.1.3"
 
 end

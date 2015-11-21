@@ -19,7 +19,7 @@
     // Override point for customization after application launch.
     
     NSString * startPagePath = @"http://app.hekr.me/templates/start/index.html";//入口地址 把该入口地址改为你本地服务器地址即可开始调试
-    [[Hekr sharedInstance] config:@"" startPage:startPagePath launchOptions:launchOptions];
+    [[Hekr sharedInstance] config:@{} startPage:startPagePath launchOptions:launchOptions];
     
     UINavigationController * nav = (UINavigationController*)self.window.rootViewController;
     nav.navigationBarHidden = YES;

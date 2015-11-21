@@ -5,10 +5,12 @@ PODS:
     - Reachability (~> 3.2)
     - SocketRocket (~> 0.4.1)
     - WebViewJavascriptBridge (~> 4.1.4)
+    - WeiboSDK (~> 3.1.3)
     - ZipArchive (~> 1.4.0)
   - Reachability (3.2)
-  - SocketRocket (0.4.1)
+  - SocketRocket (0.4.2)
   - WebViewJavascriptBridge (4.1.4)
+  - WeiboSDK (3.1.3)
   - ZipArchive (1.4.0)
 
 DEPENDENCIES:
@@ -20,10 +22,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: f5783bdedd232d91b89769bc4b5a1580aed518ad
-  HekrSDK: 62e4a33a0a4a656a3473b846500710c6cc59ad75
+  HekrSDK: e274803748253534258ec2792693e686118284d5
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
-  SocketRocket: ee0b5c34182d37bb4f1f8d628bbe737718126daa
+  SocketRocket: ffe08119b00ef982f6c37052a4705a057c8494ad
   WebViewJavascriptBridge: f10ac16f2cd3adf2b941bd79477c55a8f6e01044
+  WeiboSDK: acb067053668102cf07d01aa7604350162c2e466
   ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0
