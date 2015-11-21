@@ -200,6 +200,48 @@
         callback(res.obj);
       });
     }
+    function _open(schameurl){
+      bridge.callHandler('open',{'url':schameurl},function(res){
+      });
+    }
+    function _qrScan(callback){
+      bridge.callHandler('qrScan',{},function(res){
+        callback(res.code,res.error);
+      });
+    }
+    function _backTo(path,animation){
+      bridge.callHandler('backTo',{'path':path,'animation':animation},function(res){});
+    }
+    function _getPreferences(callbck){
+      bridge.callHandle('getPreferences',{},function(res){
+        callback(res.obj,res.error);
+      });
+    }
+    function _setPreferences(json,callback){
+      bridge.callHandle('setPreferences',{'obj':json},function(res){
+        callback(res.obj,res.error);
+      });
+    }
+    function _removeDevice(tid,callback){
+      bridge.callHandle('removeDevice',{'tid':tid},function(res){
+        callback(res.obj,res.error);
+      });
+    }
+    function _deviceAuthList(tid,callback){
+      bridge.callHandle('deviceAuthList',{'tid':tid},function(res){
+        callback(res.obj,res.error);
+      });
+    }
+    function _deviceDeauth(tid,from,grant,callback){
+      bridge.callHandle('deviceDeauth',{'tid':tid,'from':from,'grant':grant},function(res){
+        callback(res.obj,res.error);
+      });
+    }
+    function _deviceAuth(tid,grant,desc,callback){
+      bridge.callHandle('deviceAuthList',{'tid':tid,'grant':grant,'desc':desc},function(res){
+        callback(res.obj,res.error);
+      });
+    }
     window.Hekr = {
       messageHandels:{},
       userHandel:_defaultUserHandel,
@@ -223,7 +265,9 @@
       close:_close,
       closeAll:_closeAll,
       currentSSID:_currentSSID,
-      onRemoteNotification:_onRemoteNotification
+      onRemoteNotification:_onRemoteNotification,
+      open:_open,
+      qrScan:_qrScan
     }
     bridge.init(function(message, responseCallback) {
       responseCallback({});
@@ -251,7 +295,7 @@
     _handleMessageFromObjC: _handleMessageFromObjC
   }
 
-  _initHekrSDK(WebViewJavascriptBridge)
+  _initHekrSDK(window.WebViewJavascriptBridge)
 
   var doc = document
   _createQueueReadyIframe(doc)

@@ -103,8 +103,10 @@ Pod::Spec.new do |s|
 
   s.source_files = "HekrSDK/*.h"
 
-  s.resource  = "HekrSDK/Resource/WebViewJavascriptBridge.js.txt"
-
+  #s.resource  = "HekrSDK/Resource/WebViewJavascriptBridge.js.txt"
+  s.resource_bundles = {
+    'JSSDK' => ['HekrSDK/Resource/WebViewJavascriptBridge.js.txt']
+  }
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
 
