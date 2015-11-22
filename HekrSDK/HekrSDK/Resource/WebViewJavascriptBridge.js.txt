@@ -267,7 +267,14 @@
       currentSSID:_currentSSID,
       onRemoteNotification:_onRemoteNotification,
       open:_open,
-      qrScan:_qrScan
+      qrScan:_qrScan,
+      backTo:_backTo,
+      getPreferences:_getPreferences,
+      setPreferences:_setPreferences,
+      removeDevice:_removeDevice,
+      deviceAuthList:_deviceAuthList,
+      deviceDeauth:_deviceDeauth,
+      deviceAuth:_deviceAuth
     }
     bridge.init(function(message, responseCallback) {
       responseCallback({});
